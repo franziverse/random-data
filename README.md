@@ -8,7 +8,7 @@ The goal is to compare how well the models can still learn and fit the data and 
 **Clone the repository**  
 
 ```
-git clone ...
+git clone https://github.com/franziverse/random-data.git
 cd random-data
 ```
 
