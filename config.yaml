@@ -1,0 +1,15 @@
+dataset: MNIST1D            # MNIST or MNIST1D or CIFAR10
+
+
+model:
+    hidden_dimensions: 300
+
+training:
+    epochs: 60
+
+permutations: 
+    shuffled_label: y                      # y-yes or n-no
+    shuffled_pixel: y                      # y-yes or n-no
+    random_pixel: y                        # y-yes or n-no
+    gaussian_noise: y                      # y-yes or n-no
+    original_data_plus_gaussian_noise: y   # y-yes or n-no
