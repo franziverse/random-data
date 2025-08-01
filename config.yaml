@@ -1,15 +1,16 @@
-dataset: MNIST1D            # MNIST or MNIST1D or CIFAR10
+dataset: MNIST1D           # MNIST or MNIST1D or CIFAR10
 
 
 model:
-    hidden_dimensions: 300
+    hidden_dimensions: 300                 # 300 is enough for MNIST1D, for CIFAR10 use 1000 (or more)
 
 training:
-    epochs: 60
+    epochs: 30                             # 30 (for MNIST1D), 60 (for MNIST), 100 (for CIFAR10)
 
-permutations: 
+corruptions: 
     shuffled_label: y                      # y-yes or n-no
     shuffled_pixel: y                      # y-yes or n-no
     random_pixel: y                        # y-yes or n-no
-    gaussian_noise: y                      # y-yes or n-no
+    gaussian_noise_general: y              # y-yes or n-no
+    gaussian_noise_individual: y           # y-yes or n-no
     original_data_plus_gaussian_noise: y   # y-yes or n-no

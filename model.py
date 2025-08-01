@@ -4,6 +4,11 @@ from torch.optim.lr_scheduler import StepLR
 from IPython.display import display, clear_output
 from torch.utils.data import DataLoader, TensorDataset
 
+#This file only includes a fully connected multi-layered perceptrons. 
+#If you are interested in how other other models work with corrupted data you can have a look at the original paper: 'UNDERSTANDING DEEP LEARNING REQUIRES RE-THINKING GENERALIZATION' by Zhang et. al
+#The paper used various model: (simplified) inception architecture, AlexNet and MLPs. It also includes another dataset: ImageNet.
+
+
 # initialize weights for linear layers using He initialization 
 def weights_init(layer_in):
     if isinstance(layer_in, nn.Linear):

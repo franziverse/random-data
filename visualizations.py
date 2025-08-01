@@ -104,9 +104,11 @@ def summary_statistics(losses, accuracies, pos=1, fig_height=5, vspace=0.5):
     ax1 = plt.subplot(grid[0,0])
     for i in losses:
         plt.plot(i[pos], label=f"{i[0]}")
-    plt.ylabel('Loss'); plt.xlabel('Epoch'); plt.title('Losses'); plt.grid(True); plt.legend()
+    title1 = 'Training loss' if pos == 1 else ('Test loss' if pos == 2 else 'Idk')
+    plt.ylabel(title1); plt.xlabel('Epoch'); plt.title('Losses'); plt.grid(True); plt.legend()
 
     ax2 = plt.subplot(grid[0,1])
     for i in accuracies:
         plt.plot(i[pos], label=f"{i[0]}")
-    plt.ylabel('Accuracy'); plt.xlabel('Epoch'); plt.title('Accuracies'); plt.grid(True); plt.legend()
+    title2 = 'Training accuracy' if pos == 1 else ('Test accuracies' if pos == 2 else 'Idk')
+    plt.ylabel(title2); plt.xlabel('Epoch'); plt.title('Accuracies'); plt.grid(True); plt.legend()
